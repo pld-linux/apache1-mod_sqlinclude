@@ -9,7 +9,6 @@ License:	BSD
 Group:		Networking/Daemons
 Source0:	http://prdownloads.sourceforge.net/mod-sqlinclude/mod_sqlinclude-%{version}.tgz
 URL:		http://sourceforge.net/projects/mod-sqlinclude/
-BuildRequires:	%{apxs}
 BuildRequires:	apache(EAPI)-devel
 BuildRequires:	mysql-devel
 Prereq:		%{_sbindir}/apxs
