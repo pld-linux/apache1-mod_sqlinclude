@@ -4,7 +4,7 @@ Summary:	Apache module: mySQL based "Include"-alike configuration command
 Summary(pl):	Modu³ do apache: bazuj±ca na mySQL komenda konfiguracji ala "Include"
 Name:		apache1-mod_%{mod_name}
 Version:	1.4
-Release:	1.2
+Release:	2
 License:	BSD
 Group:		Networking/Daemons
 Source0:	http://dl.sourceforge.net/mod-sqlinclude/mod_sqlinclude-%{version}.tgz
