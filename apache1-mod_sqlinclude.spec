@@ -1,10 +1,10 @@
 %define		mod_name	sqlinclude
-%define 	apxs		/usr/sbin/apxs
+%define		apxs		/usr/sbin/apxs
 Summary:	Apache module: mySQL based "Include"-alike configuration command.
 Summary(pl):	Modu³ do apache: bazuj±ca na mySQL komenda konfiguracji ala "Include"
 Name:		apache-mod_%{mod_name}
 Version:	1.4
-Release:	2
+Release:	3
 License:	BSD
 Group:		Networking/Daemons
 Source0:	http://prdownloads.sourceforge.net/mod-sqlinclude/mod_sqlinclude-%{version}.tgz
@@ -16,7 +16,7 @@ Requires:	apache(EAPI)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_pkglibdir	%(%{apxs} -q LIBEXECDIR)
-%define         _sysconfdir     /etc/httpd
+%define		_sysconfdir	/etc/httpd
 
 %description
 mod_sqlinclude is an Apache Web server module which implements mySQL
