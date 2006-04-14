@@ -12,9 +12,10 @@ Source0:	http://dl.sourceforge.net/mod-sqlinclude/mod_sqlinclude-%{version}.tgz
 URL:		http://sourceforge.net/projects/mod-sqlinclude/
 BuildRequires:	apache1-devel >= 1.3.33-2
 BuildRequires:	mysql-devel
+BuildRequires:	rpmbuild(macros) >= 1.268
 Requires(triggerpostun):	%{apxs}
 Requires:	apache1 >= 1.3.33-2
-Obsoletes:	apache-mod_%{mod_name} <= 1.4
+Obsoletes:	apache-mod_sqlinclude <= 1.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_pkglibdir	%(%{apxs} -q LIBEXECDIR 2>/dev/null)
@@ -50,15 +51,11 @@ echo 'LoadModule %{mod_name}_module	modules/mod_%{mod_name}.so' > \
 rm -rf $RPM_BUILD_ROOT
 
 %post
-if [ -f /var/lock/subsys/apache ]; then
-	/etc/rc.d/init.d/apache restart 1>&2
-fi
+%service -q apache restart
 
 %postun
 if [ "$1" = "0" ]; then
-	if [ -f /var/lock/subsys/apache ]; then
-		/etc/rc.d/init.d/apache restart 1>&2
-	fi
+	%service -q apache restart
 fi
 
 %triggerpostun -- apache1-mod_%{mod_name} < 1.4-1.2
