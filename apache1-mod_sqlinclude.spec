@@ -1,7 +1,7 @@
 %define		mod_name	sqlinclude
 %define		apxs		/usr/sbin/apxs1
 Summary:	Apache module: mySQL based "Include"-alike configuration command
-Summary(pl.UTF-8):   Moduł do apache: bazująca na mySQL komenda konfiguracji ala "Include"
+Summary(pl.UTF-8):	Moduł do apache: bazująca na mySQL komenda konfiguracji ala "Include"
 Name:		apache1-mod_%{mod_name}
 Version:	1.4
 Release:	5
