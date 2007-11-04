@@ -10,7 +10,7 @@ Group:		Networking/Daemons
 Source0:	http://dl.sourceforge.net/mod-sqlinclude/mod_sqlinclude-%{version}.tgz
 # Source0-md5:	ecb1fd5d5a89c55e7dda4a9a456b0c13
 URL:		http://sourceforge.net/projects/mod-sqlinclude/
-BuildRequires:	apache1-devel >= 1.3.33-2
+BuildRequires:	apache1-devel >= 1.3.39
 BuildRequires:	mysql-devel
 BuildRequires:	rpmbuild(macros) >= 1.268
 Requires(triggerpostun):	%{apxs}
